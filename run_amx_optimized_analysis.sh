@@ -7,6 +7,7 @@ set -e
 
 # 配置参数
 MODEL_PATH="/data/share/huggingface/hub/models--Qwen--Qwen3-32B/snapshots/9216db5781bf21249d130ec9da846c4624c16137"
+# MODEL_PATH="/data/share/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218"
 PYTHON_SCRIPT="/data/wangjiaqi/AMX/model_inference_amx_optimized.py"
 OUTPUT_DIR="/data/wangjiaqi/amx_optimized_analysis_qwen3-32b_$(date +%Y%m%d_%H%M%S)"
 VTUNE_BIN="/opt/intel/oneapi/vtune/latest/bin64/vtune"
