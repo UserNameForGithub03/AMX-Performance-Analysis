@@ -213,13 +213,17 @@ class AMXOptimizedModelInferenceBenchmark:
     
     def run_comprehensive_benchmark(self):
         """运行综合基准测试"""
-        # 测试提示词
+        # 测试提示词 (10倍长度版本)
         test_prompts = [
-            "The future of artificial intelligence is",
-            "In a world where technology continues to evolve,",
-            "The key to solving complex problems lies in",
-            "Machine learning algorithms have revolutionized",
-            "The intersection of science and technology"
+            "The future of artificial intelligence is promising and transformative. The future of artificial intelligence is promising and transformative. The future of artificial intelligence is promising and transformative. The future of artificial intelligence is promising and transformative. The future of artificial intelligence is promising and transformative. The future of artificial intelligence is promising and transformative. The future of artificial intelligence is promising and transformative. The future of artificial intelligence is promising and transformative. The future of artificial intelligence is promising and transformative. The future of artificial intelligence is",
+            
+            "In a world where technology continues to evolve at an unprecedented pace, we see remarkable innovations. In a world where technology continues to evolve at an unprecedented pace, we see remarkable innovations. In a world where technology continues to evolve at an unprecedented pace, we see remarkable innovations. In a world where technology continues to evolve at an unprecedented pace, we see remarkable innovations. In a world where technology continues to evolve at an unprecedented pace, we see remarkable innovations. In a world where technology continues to evolve at an unprecedented pace, we see remarkable innovations. In a world where technology continues to evolve at an unprecedented pace, we see remarkable innovations. In a world where technology continues to evolve at an unprecedented pace, we see remarkable innovations. In a world where technology continues to evolve,",
+            
+            "The key to solving complex problems lies in systematic analysis and creative thinking. The key to solving complex problems lies in systematic analysis and creative thinking. The key to solving complex problems lies in systematic analysis and creative thinking. The key to solving complex problems lies in systematic analysis and creative thinking. The key to solving complex problems lies in systematic analysis and creative thinking. The key to solving complex problems lies in systematic analysis and creative thinking. The key to solving complex problems lies in systematic analysis and creative thinking. The key to solving complex problems lies in systematic analysis and creative thinking. The key to solving complex problems lies in systematic analysis and creative thinking. The key to solving complex problems lies in",
+            
+            "Machine learning algorithms have revolutionized data processing and pattern recognition. Machine learning algorithms have revolutionized data processing and pattern recognition. Machine learning algorithms have revolutionized data processing and pattern recognition. Machine learning algorithms have revolutionized data processing and pattern recognition. Machine learning algorithms have revolutionized data processing and pattern recognition. Machine learning algorithms have revolutionized data processing and pattern recognition. Machine learning algorithms have revolutionized data processing and pattern recognition. Machine learning algorithms have revolutionized data processing and pattern recognition. Machine learning algorithms have revolutionized data processing and pattern recognition. Machine learning algorithms have revolutionized",
+            
+            "The intersection of science and technology creates new opportunities for innovation. The intersection of science and technology creates new opportunities for innovation. The intersection of science and technology creates new opportunities for innovation. The intersection of science and technology creates new opportunities for innovation. The intersection of science and technology creates new opportunities for innovation. The intersection of science and technology creates new opportunities for innovation. The intersection of science and technology creates new opportunities for innovation. The intersection of science and technology creates new opportunities for innovation. The intersection of science and technology creates new opportunities for innovation. The intersection of science and technology"
         ]
         
         print("=" * 60)
