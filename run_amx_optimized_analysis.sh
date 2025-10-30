@@ -79,11 +79,13 @@ generate_reports() {
         -report-output "$OUTPUT_DIR/amx_optimized_topdown.txt" > /dev/null 2>&1
     
     # 生成内存访问报告
-    echo "Generating memory access report..."
-    $VTUNE_BIN -report memory-access \
-        -result-dir "$OUTPUT_DIR/amx_optimized" \
-        -format text \
-        -report-output "$OUTPUT_DIR/amx_optimized_memory.txt" > /dev/null 2>&1
+    # 注意: memory-access 报告类型不适用于 uarch-exploration 收集
+    # 内存信息已包含在 summary 和 top-down 报告中
+    # echo "Generating memory access report..."
+    # $VTUNE_BIN -report memory-access \
+    #     -result-dir "$OUTPUT_DIR/amx_optimized" \
+    #     -format text \
+    #     -report-output "$OUTPUT_DIR/amx_optimized_memory.txt" > /dev/null 2>&1
     
     # 验证报告文件是否创建成功
     echo "Verifying report files..."
@@ -97,12 +99,6 @@ generate_reports() {
         echo "✓ Top-down report created: $(wc -l < "$OUTPUT_DIR/amx_optimized_topdown.txt") lines"
     else
         echo "✗ Top-down report not found"
-    fi
-    
-    if [ -f "$OUTPUT_DIR/amx_optimized_memory.txt" ]; then
-        echo "✓ Memory report created: $(wc -l < "$OUTPUT_DIR/amx_optimized_memory.txt") lines"
-    else
-        echo "✗ Memory report not found"
     fi
     
     echo "Reports generated successfully!"
@@ -144,7 +140,6 @@ extract_key_metrics() {
     echo "Detailed analysis files:"
     echo "- Summary: $OUTPUT_DIR/amx_optimized_summary.txt"
     echo "- Top-down: $OUTPUT_DIR/amx_optimized_topdown.txt"
-    echo "- Memory: $OUTPUT_DIR/amx_optimized_memory.txt"
     echo "=========================================="
 }
 
