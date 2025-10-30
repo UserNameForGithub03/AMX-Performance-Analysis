@@ -1,6 +1,7 @@
 
 
 ```
+目录结构：
 |── measure_amx_util.py  # torch做矩阵乘法看exe.amx_busy/cycles
 ├── model_inference_amx_optimized.py #LLM Inference
 ├── model_inference_benchmark.py
@@ -9,26 +10,18 @@
 │   ├── results_32b.txt
 │   ├── results_qwen3-32b_summary.txt
 ├── run_amx_cache_analysis.sh
-├── run_amx_optimized_analysis.sh #配合model_inference_amx_optimized.p
+├── run_amx_optimized_analysis.sh #配合model_inference_amx_optimized.py
 └── run_vtune_analysis.sh
 ```
 ### 流程
 1. quick_test.py 
    (验证模型可用)
    
-2. model_inference_benchmark.py 
-   (获取基准性能)
-   
-3. model_inference_amx_optimized.py 
+2. model_inference_amx_optimized.py 
    (测试AMX优化效果)
    
-4. measure_amx_util.py 
-   (量化AMX利用率)
-   
-5. run_amx_cache_analysis.sh 或 run_vtune_analysis.sh
+3. run_amx_cache_analysis.sh 或 run_vtune_analysis.sh
    (深入性能分析)
-   
-6. 根据VTune报告优化代码
 
 ### 一些命令
 - MxK和KxN矩阵乘法计算iters次 `./measure_amx_util.py matmul --m 1 --k 7168 --n 28672 --dtype bf16 --iters 50`
