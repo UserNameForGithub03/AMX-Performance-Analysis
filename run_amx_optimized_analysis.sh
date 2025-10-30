@@ -78,15 +78,6 @@ generate_reports() {
         -format text \
         -report-output "$OUTPUT_DIR/amx_optimized_topdown.txt" > /dev/null 2>&1
     
-    # 生成内存访问报告
-    # 注意: memory-access 报告类型不适用于 uarch-exploration 收集
-    # 内存信息已包含在 summary 和 top-down 报告中
-    # echo "Generating memory access report..."
-    # $VTUNE_BIN -report memory-access \
-    #     -result-dir "$OUTPUT_DIR/amx_optimized" \
-    #     -format text \
-    #     -report-output "$OUTPUT_DIR/amx_optimized_memory.txt" > /dev/null 2>&1
-    
     # 验证报告文件是否创建成功
     echo "Verifying report files..."
     if [ -f "$OUTPUT_DIR/amx_optimized_summary.txt" ]; then
@@ -148,6 +139,7 @@ main() {
     check_dependencies
     run_amx_optimized_analysis
     generate_reports
+    # OUTPUT_DIR="/data/wangjiaqi/amx_optimized_analysis_qwen3-32b_20251029_154917"
     extract_key_metrics
     
     echo ""

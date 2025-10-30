@@ -18,9 +18,17 @@ build/
 
 # 日志文件
 *.log
-*.txt
 vtune_*.log
 vtune_*.txt
+
+# 允许小的summary文件提交
+!*_summary.txt
+
+# 忽略大的topdown和其他结果文件
+*_topdown.txt
+*_memory.txt
+results_*.txt
+!results_*_summary.txt
 
 # 临时文件
 *.swp
