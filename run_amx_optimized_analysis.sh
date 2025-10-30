@@ -5,6 +5,10 @@
 
 set -e
 
+# 激活conda环境
+source /data/wangjiaqi/anaconda3/etc/profile.d/conda.sh
+conda activate openvivo
+
 # 配置参数
 MODEL_PATH="/data/share/huggingface/hub/models--Qwen--Qwen3-32B/snapshots/9216db5781bf21249d130ec9da846c4624c16137"
 # MODEL_PATH="/data/share/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218"
