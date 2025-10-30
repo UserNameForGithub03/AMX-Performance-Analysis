@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# VTune结果目录（太大，不上传）
+**/amx_optimized_analysis*/
+**/vtune_analysis*/
+**/amx_cache_analysis*/
+**/vtune_perf/
+**/vtune_result*/
+**/vtune_results/
+
+# 日志文件
+*.log
+*.txt
+vtune_*.log
+vtune_*.txt
+
+# 临时文件
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 大型数据文件
+*.bin
+*.dat
+*.h5
+*.hdf5
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# 系统文件
+.Trash-*/
+
