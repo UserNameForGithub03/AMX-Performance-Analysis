@@ -27,8 +27,12 @@ vtune_*.txt
 # 忽略大的topdown和其他结果文件
 *_topdown.txt
 *_memory.txt
-results_*.txt
+
+# 忽略根目录的results_开头的文件，但允许results/目录
+/results_*.txt
 !results_*_summary.txt
+# 允许results/目录下的所有内容
+!results/
 
 # 临时文件
 *.swp
