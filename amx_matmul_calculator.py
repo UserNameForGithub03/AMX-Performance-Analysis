@@ -21,7 +21,7 @@ AMX_OPS_PER_CYCLE = {
     'fp32': 1024,   # FP32: 与BF16相同
 }
 
-DEFAULT_CPU_FREQ_GHZ = 4.00
+DEFAULT_CPU_FREQ_GHZ = 3.50  #因为观察到AMX运行的时候CPU的频率在3.5GHz左右
 BENCHDNN_PATH = "/data/wangjiaqi/oneDNN/build/tests/benchdnn/benchdnn"
 
 
