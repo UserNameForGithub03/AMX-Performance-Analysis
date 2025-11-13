@@ -1,4 +1,5 @@
 #!/bin/bash
+# Usage: bind-and-test <core> <cmd_and_args>
 
 if [[ $# -lt 2 ]] ; then
 	echo "Usage: bind-and-test <core> <cmd_and_args>"
