@@ -14,7 +14,7 @@ import numpy as np
 from typing import List, Dict, Any
 
 # 设置环境变量以启用AMX
-os.environ['ONEDNN_VERBOSE'] = '1'
+os.environ['ONEDNN_VERBOSE'] = '0'
 os.environ['ONEDNN_MAX_CPU_ISA'] = 'AVX512_CORE_AMX'
 os.environ['OMP_NUM_THREADS'] = '96'  # 使用所有物理核心
 os.environ['KMP_AFFINITY'] = 'granularity=fine,compact,1,0'
@@ -42,8 +42,8 @@ class AMXOptimizedModelInferenceBenchmark:
         self.use_bf16 = use_bf16 and IPEX_AVAILABLE
         self.model = None
         self.tokenizer = None
-        self.warmup_runs = 3
-        self.benchmark_runs = 10
+        self.warmup_runs = 1
+        self.benchmark_runs = 5
         
         print(f"AMX Optimization: {'Enabled' if self.use_bf16 else 'Disabled'}")
         print(f"IPEX Available: {IPEX_AVAILABLE}")
